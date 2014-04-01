@@ -4,7 +4,7 @@ Release:    	0
 Summary:	Plugin CACTI aggregate
 Group:		System/Monitoring
 License:	GPLv2
-Source0:    	autom8.tgz
+Source0:    	 cacti-plugins-autom8-0.35.tgz
 BuildRoot:  	%(mktemp -ud %{_tmppath}/}%{name}-XXXXXX)
 BuildArch:	noarch
 Requires:	cacti

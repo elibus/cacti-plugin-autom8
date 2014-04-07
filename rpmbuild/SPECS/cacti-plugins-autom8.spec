@@ -31,7 +31,7 @@ cp -pr  * %{buildroot}/usr/share/cacti/plugins/autom8/
 
 
 %clean
-#rm -rf %{buildroot}
+rm -rf %{buildroot}
 
 
 %files

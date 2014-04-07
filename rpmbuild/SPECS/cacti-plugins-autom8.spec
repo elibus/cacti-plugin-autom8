@@ -1,16 +1,20 @@
+%define patches_087d  /usr/share/cacti/plugins/autom8/patches-087d
+%define patches_087e  /usr/share/cacti/plugins/autom8/patches-087e
+%define patches_087g  /usr/share/cacti/plugins/autom8/patches-087g
+
+Summary:	Plugin CACTI aggregate
 Name:		cacti-plugins-autom8	
 Version:	0.35
-Release:    	0	
-Summary:	Plugin CACTI aggregate
+Release:    	1.bdi6
 Group:		System/Monitoring
 License:	GPLv2
-Source0:    	 cacti-plugins-autom8-0.35.tgz
+Source0:    	cacti-plugins-autom8-%{version}.tgz
 BuildRoot:  	%(mktemp -ud %{_tmppath}/}%{name}-XXXXXX)
 BuildArch:	noarch
 Requires:	cacti
 
 %description
- Plugin CACTI autom8
+Plugin CACTI autom8
 
 %prep
 %setup -q
@@ -19,47 +23,15 @@ Requires:	cacti
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/cacti/plugins/autom8/
-mkdir -p %{buildroot}/usr/share/cacti/plugins/autom8/patches-087e/
-mkdir -p %{buildroot}/usr/share/cacti/plugins/autom8/patches-087d/
-mkdir -p %{buildroot}/usr/share/cacti/plugins/autom8/patches-087g/
+mkdir -p %{buildroot}%{patches_087d}
+mkdir -p %{buildroot}%{patches_087e}
+mkdir -p %{buildroot}%{patches_087g}
 
-cp -p   autom8_graph_rules.php  %{buildroot}/usr/share/cacti/plugins/autom8/autom8_graph_rules.php                
-cp -p   autom8_functions.php    %{buildroot}/usr/share/cacti/plugins/autom8/autom8_functions.php              
-cp -p   setup.php   %{buildroot}/usr/share/cacti/plugins/autom8/setup.php             
-cp -p   README  %{buildroot}/usr/share/cacti/plugins/autom8/README                
-cp -p   autom8_sql.php  %{buildroot}/usr/share/cacti/plugins/autom8/autom8_sql.php                
-cp -p   autom8_tree_rules.php   %{buildroot}/usr/share/cacti/plugins/autom8/autom8_tree_rules.php             
-cp -p   LICENSE %{buildroot}/usr/share/cacti/plugins/autom8/LICENSE               
-cp -p   autom8_utilities.php    %{buildroot}/usr/share/cacti/plugins/autom8/autom8_utilities.php              
-cp -p   autom8_actions.php  %{buildroot}/usr/share/cacti/plugins/autom8/autom8_actions.php                
-cp -p   automate_manual.pdf  %{buildroot}/usr/share/cacti/plugins/autom8/automate_manual.pdf
-
-cp -p   patches-087e/lib_api_device.php.patch %{buildroot}/usr/share/cacti/plugins/autom8/patches-087e/lib_api_device.php.patch               
-cp -p   patches-087e/lib_html_utility.patch %{buildroot}/usr/share/cacti/plugins/autom8/patches-087e/lib_html_utility.patch               
-cp -p   patches-087e/lib_template.php.patch %{buildroot}/usr/share/cacti/plugins/autom8/patches-087e/lib_template.php.patch               
-cp -p   patches-087e/lib_api_tree.php.patch %{buildroot}/usr/share/cacti/plugins/autom8/patches-087e/lib_api_tree.php.patch               
-cp -p   patches-087e/host.php.patch %{buildroot}/usr/share/cacti/plugins/autom8/patches-087e/host.php.patch               
-cp -p   patches-087e/lib_data_query.php.patch   %{buildroot}/usr/share/cacti/plugins/autom8/patches-087e/lib_data_query.php.patch             
-cp -p   patches-087e/lib_api_automation_tools.php.patch %{buildroot}/usr/share/cacti/plugins/autom8/patches-087e/lib_api_automation_tools.php.patch               
-cp -p   patches-087e/cli.patch   %{buildroot}/usr/share/cacti/plugins/autom8/patches-087e/cli.patch
-
-
-cp -p   patches-087d/lib_api_device.php.patch   %{buildroot}/usr/share/cacti/plugins/autom8/patches-087d/lib_api_device.php.patch             
-cp -p   patches-087d/lib_html_utility.patch %{buildroot}/usr/share/cacti/plugins/autom8/patches-087d/lib_html_utility.patch               
-cp -p   patches-087d/lib_template.php.patch %{buildroot}/usr/share/cacti/plugins/autom8/patches-087d/lib_template.php.patch               
-cp -p   patches-087d/cli.patch  %{buildroot}/usr/share/cacti/plugins/autom8/patches-087d/cli.patch                
-cp -p   patches-087d/lib_api_tree.php.patch %{buildroot}/usr/share/cacti/plugins/autom8/patches-087d/lib_api_tree.php.patch               
-cp -p   patches-087d/host.php.patch %{buildroot}/usr/share/cacti/plugins/autom8/patches-087d/host.php.patch               
-cp -p   patches-087d/lib_data_query.php.patch   %{buildroot}/usr/share/cacti/plugins/autom8/patches-087d/lib_data_query.php.patch             
-cp -p   patches-087d/lib_api_automation_tools.php.patch  %{buildroot}/usr/share/cacti/plugins/autom8/patches-087d/lib_api_automation_tools.php.patch
-
-cp -p   patches-087g/cacti087g_autom8.patch %{buildroot}/usr/share/cacti/plugins/autom8/patches-087g/cacti087g_autom8.patch               
-
+cp -pr  * %{buildroot}/usr/share/cacti/plugins/autom8/               
 
 
 %clean
-rm -rf %{buildroot}
+#rm -rf %{buildroot}
 
 
 %files

@@ -40,35 +40,7 @@ rm -rf %{buildroot}
 %doc /usr/share/cacti/plugins/autom8/LICENSE
 %doc /usr/share/cacti/plugins/autom8/automate_manual.pdf
 
-/usr/share/cacti/plugins/autom8/setup.php
-/usr/share/cacti/plugins/autom8/autom8_graph_rules.php
-/usr/share/cacti/plugins/autom8/autom8_functions.php
-/usr/share/cacti/plugins/autom8/autom8_sql.php
-/usr/share/cacti/plugins/autom8/autom8_tree_rules.php
-/usr/share/cacti/plugins/autom8/autom8_utilities.php
-/usr/share/cacti/plugins/autom8/autom8_actions.php
-
-
-/usr/share/cacti/plugins/autom8/patches-087e/lib_api_device.php.patch
-/usr/share/cacti/plugins/autom8/patches-087e/lib_html_utility.patch
-/usr/share/cacti/plugins/autom8/patches-087e/lib_template.php.patch
-/usr/share/cacti/plugins/autom8/patches-087e/lib_api_tree.php.patch
-/usr/share/cacti/plugins/autom8/patches-087e/host.php.patch
-/usr/share/cacti/plugins/autom8/patches-087e/lib_data_query.php.patch
-/usr/share/cacti/plugins/autom8/patches-087e/lib_api_automation_tools.php.patch
-/usr/share/cacti/plugins/autom8/patches-087e/cli.patch
-
-
-/usr/share/cacti/plugins/autom8/patches-087d/lib_api_device.php.patch
-/usr/share/cacti/plugins/autom8/patches-087d/lib_html_utility.patch
-/usr/share/cacti/plugins/autom8/patches-087d/lib_template.php.patch
-/usr/share/cacti/plugins/autom8/patches-087d/cli.patch
-/usr/share/cacti/plugins/autom8/patches-087d/lib_api_tree.php.patch
-/usr/share/cacti/plugins/autom8/patches-087d/host.php.patch
-/usr/share/cacti/plugins/autom8/patches-087d/lib_data_query.php.patch
-/usr/share/cacti/plugins/autom8/patches-087d/lib_api_automation_tools.php.patch
-
-/usr/share/cacti/plugins/autom8/patches-087g/cacti087g_autom8.patch
+/usr/share/cacti/plugins/autom8
 
 
 %changelog

@@ -35,17 +35,18 @@ rm -rf %{buildroot}
 
 
 %files
-%defattr(0664,cacti,cacti,0664)
+%defattr(-,cacti,cacti,-)
+%doc /usr/share/cacti/plugins/autom8/README
+%doc /usr/share/cacti/plugins/autom8/LICENSE
+%doc /usr/share/cacti/plugins/autom8/automate_manual.pdf
+
+/usr/share/cacti/plugins/autom8/setup.php
 /usr/share/cacti/plugins/autom8/autom8_graph_rules.php
 /usr/share/cacti/plugins/autom8/autom8_functions.php
-/usr/share/cacti/plugins/autom8/setup.php
-/usr/share/cacti/plugins/autom8/README
 /usr/share/cacti/plugins/autom8/autom8_sql.php
 /usr/share/cacti/plugins/autom8/autom8_tree_rules.php
-/usr/share/cacti/plugins/autom8/LICENSE
 /usr/share/cacti/plugins/autom8/autom8_utilities.php
 /usr/share/cacti/plugins/autom8/autom8_actions.php
-/usr/share/cacti/plugins/autom8/automate_manual.pdf
 
 
 /usr/share/cacti/plugins/autom8/patches-087e/lib_api_device.php.patch
@@ -71,3 +72,5 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Tue Apr 8 2014 Pietro Moretti <MORETTI.PIETRO@ac.bankit.it> 0.35-1
+- Add %doc flag

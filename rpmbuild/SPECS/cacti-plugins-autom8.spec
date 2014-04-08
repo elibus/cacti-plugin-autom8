@@ -2,7 +2,7 @@
 %define patches_087e  /usr/share/cacti/plugins/autom8/patches-087e
 %define patches_087g  /usr/share/cacti/plugins/autom8/patches-087g
 
-Summary:	Plugin CACTI aggregate
+Summary:	Plugin CACTI autom8
 Name:		cacti-plugins-autom8	
 Version:	0.35
 Release:    	1.bdi6

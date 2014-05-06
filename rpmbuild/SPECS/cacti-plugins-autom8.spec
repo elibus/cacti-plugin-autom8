@@ -39,10 +39,12 @@ rm -rf %{buildroot}
 %doc /usr/share/cacti/plugins/autom8/README
 %doc /usr/share/cacti/plugins/autom8/LICENSE
 %doc /usr/share/cacti/plugins/autom8/automate_manual.pdf
-
-/usr/share/cacti/plugins/autom8
+/usr/share/cacti/plugins/autom8/*.php
+/usr/share/cacti/plugins/autom8/patches-087d
+/usr/share/cacti/plugins/autom8/patches-087e
+/usr/share/cacti/plugins/autom8/patches-087g
 
 
 %changelog
-* Tue Apr 8 2014 Pietro Moretti <MORETTI.PIETRO@ac.bankit.it> 0.35-1
+* Tue Apr 8 2014 Marco Tizzoni <marco.tizzoni@gmail.com> 0.35-1
 - Add %doc flag
